@@ -11,8 +11,7 @@ stages:
    # vmImage: ubuntu-latest
 
   jobs:
- 
-  - job: buildApp01
+  - job: buildApp
 
     strategy:
       matrix:
@@ -22,7 +21,13 @@ stages:
           PYTHON_VERSION: '3.6'
         build03:
           PYTHON_VERSION: '3.7'
-      maxParallel: 8
+        build04:
+          PYTHON_VERSION: '3.6'
+        build05:
+          PYTHON_VERSION: '3.7'
+        build06:
+          PYTHON_VERSION: '3.7'
+      maxParallel: 7
 
     steps:
     - script: |
