@@ -1,3 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pipeline-auth
+data:
+  AZP_URL: https://dev.azure.com/houssemdellai
+  AZP_POOL: linux-containers-aks
+  AZP_TOKEN: azpff4ljxyq4rwwg2ri74qmln4yx25g7alnr3folywi3dnbiqrva
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +25,7 @@ spec:
         app: azdevops-agent
     spec:
       containers:
-      - name: kubepodcreation
+      - name: azdevops-agent
         image: acrforakscluster.azurecr.io/dockeragent:ubuntu-18.04
         env:
           - name: AZP_URL
