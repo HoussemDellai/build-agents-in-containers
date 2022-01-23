@@ -11,21 +11,21 @@ stages:
   jobs:
   - job: buildApp
 
-    # strategy:
-    #   matrix:
-    #     build01:
-    #       myVar: '1.0'
-    #     build02:
-    #       myVar: '1.0'
-    #     build03:
-    #       myVar: '1.0'
-    #     build04:
-    #       myVar: '1.0'
-    #     build05:
-    #       myVar: '1.0'
-    #     build06:
-    #       myVar: '1.0'
-    #   maxParallel: 7
+    strategy:
+      matrix:
+        build01:
+          myVar: '1.0'
+        build02:
+          myVar: '1.0'
+        build03:
+          myVar: '1.0'
+        build04:
+          myVar: '1.0'
+        build05:
+          myVar: '1.0'
+        build06:
+          myVar: '1.0'
+      maxParallel: 7
 
     steps:
     - script: |
