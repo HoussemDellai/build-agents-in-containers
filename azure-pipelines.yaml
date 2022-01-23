@@ -12,7 +12,7 @@ stages:
 
   jobs:
  
-  - job: buildApp01
+  - job: buildApp01_$HOSTNAME
 
     strategy:
       matrix:
