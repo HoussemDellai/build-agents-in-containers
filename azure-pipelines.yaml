@@ -12,7 +12,8 @@ stages:
 
   jobs:
  
-  - job: buildApp01_$HOSTNAME
+  - job: buildApp
+    displayName: build on $HOSTNAME
 
     strategy:
       matrix:
