@@ -1,0 +1,19 @@
+name: DevOps Pipeline running inside a Docker Container
+
+trigger:
+- main
+
+stages:
+- stage: build
+
+  pool:
+   name: linux-containers-aks
+   # vmImage: ubuntu-latest
+
+  jobs:
+ 
+  - job: buildApp
+
+    steps:
+    
+    - script: echo "Hello from inside Docker Container"
