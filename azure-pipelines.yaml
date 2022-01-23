@@ -26,6 +26,8 @@ stages:
           PYTHON_VERSION: '3.6'
         build05:
           PYTHON_VERSION: '3.7'
+        build06:
+          PYTHON_VERSION: '3.7'
       maxParallel: 7
 
     steps:
