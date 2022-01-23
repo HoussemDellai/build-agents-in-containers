@@ -22,7 +22,7 @@ stages:
           PYTHON_VERSION: '3.6'
         build03:
           PYTHON_VERSION: '3.7'
-      maxParallel: 8
+      maxParallel: 7
 
     steps:
     - script: |
