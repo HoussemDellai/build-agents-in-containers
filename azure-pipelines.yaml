@@ -13,13 +13,30 @@ stages:
   jobs:
  
   - job: buildApp01
+
+    strategy:
+      matrix:
+        build01:
+          PYTHON_VERSION: '3.5'
+        build02:
+          PYTHON_VERSION: '3.6'
+        build03:
+          PYTHON_VERSION: '3.7'
+      maxParallel: 8
+
     steps:
     - script: |
         echo "Hello from inside Docker Container: $HOSTNAME"
         printenv
 
-  - job: buildApp02
-    steps:
-    - script: |
-        echo "Hello from inside Docker Container: $HOSTNAME"
-        printenv
+  # - job: buildApp02
+  #   steps:
+  #   - script: |
+  #       echo "Hello from inside Docker Container: $HOSTNAME"
+  #       printenv
+
+  # - job: buildApp03
+  #   steps:
+  #   - script: |
+  #       echo "Hello from inside Docker Container: $HOSTNAME"
+  #       printenv
