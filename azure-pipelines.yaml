@@ -12,8 +12,14 @@ stages:
 
   jobs:
  
-  - job: buildApp
-
+  - job: buildApp01
     steps:
-    
-    - script: echo "Hello from inside Docker Container"
+    - script: |
+        echo "Hello from inside Docker Container: $HOSTNAME"
+        printenv
+
+  - job: buildApp02
+    steps:
+    - script: |
+        echo "Hello from inside Docker Container: $HOSTNAME"
+        printenv
