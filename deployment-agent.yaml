@@ -5,7 +5,7 @@ metadata:
 data:
   AZP_URL: aHR0cHM6Ly9kZXYuYXp1cmUuY29tL2hvdXNzZW1kZWxsYWk= # https://dev.azure.com/houssemdellai
   AZP_POOL: bGludXgtY29udGFpbmVycy1ha3M= # linux-containers-aks
-  AZP_TOKEN: YXpwZmY0bGp4eXE0cnd3ZzJyaTc0cW1sbjR5eDI1ZzdhbG5yM2ZvbHl3aTNkbmJpcXJ2YQ== # azpff4ljxyq4rwwg2ri74qmln4yx25g7alnr3folywi3dnbiqrva
+  AZP_TOKEN: <YOUR_PAT_TOKEN>
 ---
 apiVersion: apps/v1
 kind: Deployment
