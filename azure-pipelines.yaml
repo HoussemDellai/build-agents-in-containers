@@ -1,5 +1,3 @@
-name: DevOps Pipeline running inside a Docker Container
-
 trigger:
 - main
 
@@ -16,17 +14,17 @@ stages:
     strategy:
       matrix:
         build01:
-          PYTHON_VERSION: '3.5'
+          myVar: '1.0'
         build02:
-          PYTHON_VERSION: '3.6'
+          myVar: '1.0'
         build03:
-          PYTHON_VERSION: '3.7'
+          myVar: '1.0'
         build04:
-          PYTHON_VERSION: '3.6'
+          myVar: '1.0'
         build05:
-          PYTHON_VERSION: '3.7'
+          myVar: '1.0'
         build06:
-          PYTHON_VERSION: '3.7'
+          myVar: '1.0'
       maxParallel: 7
 
     steps:
